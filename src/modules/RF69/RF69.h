@@ -469,8 +469,8 @@
 #define RADIOLIB_RF69_DEFAULT_RXBW                             125.0
 #define RADIOLIB_RF69_DEFAULT_POWER                            10
 #define RADIOLIB_RF69_DEFAULT_PREAMBLELEN                      16
-#define RADIOLIB_RF69_DEFAULT_SW                               {0x12, 0xAD}
-#define RADIOLIB_RF69_DEFAULT_SW_LEN                           2
+#define RADIOLIB_RF69_DEFAULT_SW                               {0xDE, 0xAD, 0xBE, 0xEF}
+#define RADIOLIB_RF69_DEFAULT_SW_LEN                           4
 /*!
   \class RF69
 
@@ -823,7 +823,7 @@ class RF69: public PhysicalLayer {
 
     /*!
       \brief Sets broadcast address. Calling this method will also enable address filtering for node and broadcast address.
-
+                    
       \param broadAddr Node address to be set.
 
       \returns \ref status_codes
